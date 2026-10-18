@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Машинное обучение в действии</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Машинное обучение в действии</h1>
+        <p class="header__subtitle">Интерактивная визуализация ключевых концепций ML</p>
+    </header>
+
+    <main class="main">
+        <section class="section section--neural-network" id="section-neural-network">
+            <div class="section__content">
+                <h2 class="section__title">Нейронная сеть</h2>
+                <p class="section__description">Визуализация работы нейрональной сети с входным, скрытым и выходным слоями</p>
+                <canvas class="animation-canvas" id="neural-network-canvas"></canvas>
+                <button class="btn btn--primary" data-animation="neural-network">Запустить</button>
+                <button class="btn btn--secondary" data-next="section-training">Следующая →</button>
+            </div>
+        </section>
+
+        <section class="section section--training" id="section-training">
+            <div class="section__content">
+                <h2 class="section__title">Обучение модели</h2>
+                <p class="section__description">Анимация процесса минимизации функции потерь во время обучения</p>
+                <canvas class="animation-canvas" id="training-canvas"></canvas>
+                <button class="btn btn--primary" data-animation="training">Запустить</button>
+                <button class="btn btn--secondary" data-next="section-classification">Следующая →</button>
+            </div>
+        </section>
+
+        <section class="section section--classification" id="section-classification">
+            <div class="section__content">
+                <h2 class="section__title">Классификация данных</h2>
+                <p class="section__description">Разделение данных на классы с помощью алгоритма машинного обучения</p>
+                <canvas class="animation-canvas" id="classification-canvas"></canvas>
+                <button class="btn btn--primary" data-animation="classification">Запустить</button>
+                <button class="btn btn--secondary" data-next="section-gradient-descent">Следующая →</button>
+            </div>
+        </section>
+
+        <section class="section section--gradient-descent" id="section-gradient-descent">
+            <div class="section__content">
+                <h2 class="section__title">Градиентный спуск</h2>
+                <p class="section__description">Оптимизация параметров путём движения вниз по поверхности функции потерь</p>
+                <canvas class="animation-canvas" id="gradient-descent-canvas"></canvas>
+                <button class="btn btn--primary" data-animation="gradient-descent">Запустить</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#section-neural-network" class="footer__top-btn">Наверх</a>
+        <p class="footer__copyright">&copy; 2026 ML Animations</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
